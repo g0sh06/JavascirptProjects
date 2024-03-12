@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for the container */
+        #canvasContainer {
+            position: relative;
+        }
+
+        /* Style for the canvas */
+        #myCanvas {
+            border: 1px solid #000;
+            /* Add any other styles you need for your canvas */
+        }
+/*Adding comments from Vim, because i am still learning it */
+        /* Style for the buttons */
+        .controlButton {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            /* Add any other styles you need for your buttons */
+        }
+    </style>
+    <title>Canvas with Buttons Example</title>
+</head>
+<body>
+    <div id="canvasContainer">
+        <canvas id="myCanvas" width="400" height="200"></canvas>
+        <!-- Add your buttons inside the container -->
+        <button class="controlButton" onclick="startDrawing()">Start Drawing</button>
+        <button class="controlButton" onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+
+    <script>
+        // Add your canvas-related JavaScript here
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        function startDrawing() {
+            // Your drawing logic goes here
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html>
